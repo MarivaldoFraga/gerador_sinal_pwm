@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus/GeradorPWM/simulation/qsim
+vdivisor_de_frequencia
+Z1 !s110 1685832522
+!i10b 1
+!s100 =aBeO`ZHZlaX6ll=SDfG;3
+Ig<^PbXePDz01LQ1Vh@Fdo3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1685832521
+8GeradorPWM.vo
+FGeradorPWM.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1685832522.000000
+!s107 GeradorPWM.vo|
+!s90 -work|work|GeradorPWM.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vdivisor_de_frequencia_vlg_vec_tst
+R1
+!i10b 1
+!s100 0fTa7MTl04;NzeJaVC0WT2
+I85lU;YFi^kEm@2PdPjZYM0
+R2
+R0
+w1685832520
+8divisor_de_frequencia_wave.vwf.vt
+Fdivisor_de_frequencia_wave.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 divisor_de_frequencia_wave.vwf.vt|
+!s90 -work|work|divisor_de_frequencia_wave.vwf.vt|
+!i113 1
+R5
+R6

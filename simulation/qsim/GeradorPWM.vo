@@ -1,0 +1,291 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
+
+// DATE "06/03/2023 19:48:41"
+
+// 
+// Device: Altera 5CGXFC7C6F23C7 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module divisor_de_frequencia (
+	clock,
+	saida);
+input 	clock;
+output 	saida;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \saida~output_o ;
+wire \clock~input_o ;
+wire \contador[0]~3_combout ;
+wire \contador[1]~0_combout ;
+wire \contador[2]~1_combout ;
+wire \contador[3]~2_combout ;
+wire \saida~0_combout ;
+wire \saida~reg0_q ;
+wire [3:0] contador;
+
+
+cyclonev_io_obuf \saida~output (
+	.i(\saida~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\saida~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \saida~output .bus_hold = "false";
+defparam \saida~output .open_drain_output = "false";
+defparam \saida~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \contador[0]~3 (
+// Equation(s):
+// \contador[0]~3_combout  = !contador[0]
+
+	.dataa(!contador[0]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\contador[0]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[0]~3 .extended_lut = "off";
+defparam \contador[0]~3 .lut_mask = 64'hAAAAAAAAAAAAAAAA;
+defparam \contador[0]~3 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \contador[0] (
+	.clk(\clock~input_o ),
+	.d(\contador[0]~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(contador[0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \contador[0] .is_wysiwyg = "true";
+defparam \contador[0] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \contador[1]~0 (
+// Equation(s):
+// \contador[1]~0_combout  = !contador[0] $ (!contador[1])
+
+	.dataa(!contador[0]),
+	.datab(!contador[1]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\contador[1]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[1]~0 .extended_lut = "off";
+defparam \contador[1]~0 .lut_mask = 64'h6666666666666666;
+defparam \contador[1]~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \contador[1] (
+	.clk(\clock~input_o ),
+	.d(\contador[1]~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(contador[1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \contador[1] .is_wysiwyg = "true";
+defparam \contador[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \contador[2]~1 (
+// Equation(s):
+// \contador[2]~1_combout  = !contador[2] $ (((!contador[0]) # (!contador[1])))
+
+	.dataa(!contador[0]),
+	.datab(!contador[1]),
+	.datac(!contador[2]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\contador[2]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[2]~1 .extended_lut = "off";
+defparam \contador[2]~1 .lut_mask = 64'h1E1E1E1E1E1E1E1E;
+defparam \contador[2]~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \contador[2] (
+	.clk(\clock~input_o ),
+	.d(\contador[2]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(contador[2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \contador[2] .is_wysiwyg = "true";
+defparam \contador[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \contador[3]~2 (
+// Equation(s):
+// \contador[3]~2_combout  = !contador[3] $ (((!contador[0]) # ((!contador[1]) # (!contador[2]))))
+
+	.dataa(!contador[0]),
+	.datab(!contador[1]),
+	.datac(!contador[2]),
+	.datad(!contador[3]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\contador[3]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \contador[3]~2 .extended_lut = "off";
+defparam \contador[3]~2 .lut_mask = 64'h01FE01FE01FE01FE;
+defparam \contador[3]~2 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \contador[3] (
+	.clk(\clock~input_o ),
+	.d(\contador[3]~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(contador[3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \contador[3] .is_wysiwyg = "true";
+defparam \contador[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \saida~0 (
+// Equation(s):
+// \saida~0_combout  = ( contador[3] & ( \saida~reg0_q  ) ) # ( !contador[3] & ( !\saida~reg0_q  $ ((((contador[2]) # (contador[1])) # (contador[0]))) ) )
+
+	.dataa(!\saida~reg0_q ),
+	.datab(!contador[0]),
+	.datac(!contador[1]),
+	.datad(!contador[2]),
+	.datae(!contador[3]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\saida~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \saida~0 .extended_lut = "off";
+defparam \saida~0 .lut_mask = 64'h9555555595555555;
+defparam \saida~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \saida~reg0 (
+	.clk(\clock~input_o ),
+	.d(\saida~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\saida~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \saida~reg0 .is_wysiwyg = "true";
+defparam \saida~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign saida = \saida~output_o ;
+
+endmodule

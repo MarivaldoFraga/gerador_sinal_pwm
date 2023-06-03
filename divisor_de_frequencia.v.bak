@@ -1,0 +1,17 @@
+module divisor_de_frequencia(
+
+	input clock,
+	
+	output reg saida
+	
+);
+	
+	reg [3:0] contador = 0;
+	
+	initial saida = 0;
+	
+	always @ (posedge clock ) contador <= contador + 1;
+	
+	always @ (contador) if (contador == 0) saida <= !saida;
+		
+endmodule

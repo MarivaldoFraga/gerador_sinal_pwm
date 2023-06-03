@@ -1,0 +1,5 @@
+module main (
+	
+	input btn_mais, btn_menos,
+	output reg[6:0] display_msb, display_lsb;
+);

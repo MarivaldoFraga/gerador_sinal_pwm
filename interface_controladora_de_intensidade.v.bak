@@ -1,0 +1,14 @@
+module interface_controladora_de_intensidade (btn_mais, btn_menos, clock, saida);
+	
+	input btn_mais, btn_menos, clock;
+	output [6:0] saida;
+	
+	// circuito combinacional assincrono que incrementa o valor da saida em 1 até o limite 99.
+	always @(negedge btn_mais)
+		if (saida != 7'1100011) saida <= saida + 7'b0000001;
+	
+	// circuito combinacional assincrono que decrementa o valor da saida em 1 até o limite de 0.
+	always @(negedge btn_menos)
+		if (saida != 7'0000000) saida <= saida - 7'b0000001;
+	
+end module

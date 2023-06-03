@@ -1,0 +1,6 @@
+
+State Machine - |interface_de_controle|estado
+Name estado.ESPERANDO estado.DECREMENTANDO estado.INCREMENTANDO 
+estado.ESPERANDO 0 0 0 
+estado.INCREMENTANDO 1 0 1 
+estado.DECREMENTANDO 1 1 0 

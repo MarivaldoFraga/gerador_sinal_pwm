@@ -1,0 +1,26 @@
+module contador_assincrono_mod_100(
+
+	input
+		modo,
+		clock,
+		reset
+		
+	output reg
+		[6:0] saida
+		
+);
+		
+	parameter
+		[6:0] INICIAL = 7'b0000000; // 0
+		[6:0] LIMITE = 7'b1100011; // 99
+		[6:0] PASSO = 7'b0000001; // 1
+		
+	begin
+		saida = LIMITE;
+		
+	always @ (posedge clock, posedge reset)
+		if (reset) saida <= INICIAL;
+		else if (modo) saida <= saida - PASSO;
+		else saida <= saida + PASSO;
+		
+endmodule

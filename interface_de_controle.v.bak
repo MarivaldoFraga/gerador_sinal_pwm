@@ -1,0 +1,10 @@
+module interface_de_controle (btn_mais, btn_menos, clock, saida, modo);
+	
+	input btn_mais, btn_menos, clock;
+	output saida, modo;
+	
+	// circuito sequencial sincrono que 
+	always@(posedge clock, btn_mais, btn_menos)
+		
+	
+endmodule
