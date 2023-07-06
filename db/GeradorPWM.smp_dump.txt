@@ -1,5 +1,5 @@
 
-State Machine - |interface_de_controle|estado
+State Machine - |top|interface_de_entrada:interface_de_entrada_1|estado
 Name estado.ESPERANDO estado.DECREMENTANDO estado.INCREMENTANDO 
 estado.ESPERANDO 0 0 0 
 estado.INCREMENTANDO 1 0 1 

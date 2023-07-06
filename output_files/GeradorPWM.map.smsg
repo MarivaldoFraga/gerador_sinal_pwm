@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at oscilador_controlado.v(15): always construct contains both blocking and non-blocking assignments File: D:/Quartus/GeradorPWM/oscilador_controlado.v Line: 15
+Warning (10268): Verilog HDL information at oscilador_customizado.v(11): always construct contains both blocking and non-blocking assignments File: D:/Quartus/GeradorPWM/oscilador_customizado.v Line: 11

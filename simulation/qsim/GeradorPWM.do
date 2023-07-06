@@ -1,11 +1,11 @@
 onerror {exit -code 1}
 vlib work
 vlog -work work GeradorPWM.vo
-vlog -work work divisor_de_frequencia_wave.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.divisor_de_frequencia_vlg_vec_tst
+vlog -work work oscilador_customizado.vwf.vt
+vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.oscilador_customizado_vlg_vec_tst
 vcd file -direction GeradorPWM.msim.vcd
-vcd add -internal divisor_de_frequencia_vlg_vec_tst/*
-vcd add -internal divisor_de_frequencia_vlg_vec_tst/i1/*
+vcd add -internal oscilador_customizado_vlg_vec_tst/*
+vcd add -internal oscilador_customizado_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -15,8 +15,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
 
 
 

@@ -1,10 +1,8 @@
-module divisor_de_frequencia(
+module divisor_de_frequencia(clock, reset, saida);
 
-	input clock,
+	input clock, reset;
 	
-	output reg saida
-	
-);
+	output reg saida;
 	
 	parameter INICIAL = 27'd0, PASSO = 27'd1;
 	
@@ -12,8 +10,18 @@ module divisor_de_frequencia(
 	
 	initial saida = 0;
 	
-	always @ (posedge clock) if (contador == INICIAL) saida = !saida;
-	
-	always @ (posedge clock) contador = contador + PASSO ;
+	always @ (posedge clock or negedge reset) begin
+		
+		if (!reset) contador = INICIAL;
+		
+		else begin
+			
+			if (contador == INICIAL) saida = !saida;
+			
+			contador = contador + PASSO;
+			
+		end
+		
+	end
 		
 endmodule

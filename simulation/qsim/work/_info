@@ -8,45 +8,129 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/Quartus/GeradorPWM/simulation/qsim
-vdivisor_de_frequencia
-Z1 !s110 1685832522
+vcontador_assincrono_mod100
+Z1 !s110 1686366055
 !i10b 1
-!s100 =aBeO`ZHZlaX6ll=SDfG;3
-Ig<^PbXePDz01LQ1Vh@Fdo3
+!s100 Z^0^8NW@jb3R4d9@E_1`Q3
+IL`a3[k:KlWSB0]6@_GoWm2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1685832521
-8GeradorPWM.vo
-FGeradorPWM.vo
-L0 31
-Z3 OV;L;10.5b;63
+w1686366054
+Z3 8GeradorPWM.vo
+Z4 FGeradorPWM.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1685832522.000000
-!s107 GeradorPWM.vo|
-!s90 -work|work|GeradorPWM.vo|
+Z7 !s108 1686366055.000000
+Z8 !s107 GeradorPWM.vo|
+Z9 !s90 -work|work|GeradorPWM.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
-vdivisor_de_frequencia_vlg_vec_tst
+Z10 o-work work
+Z11 tCvgOpt 0
+vcontador_assincrono_mod100_vlg_vec_tst
 R1
 !i10b 1
-!s100 0fTa7MTl04;NzeJaVC0WT2
-I85lU;YFi^kEm@2PdPjZYM0
+!s100 dViI7BWXaFnEB7THB9mX^3
+IeCGhBf]VGGV85Eb0Zfz0F0
 R2
 R0
-w1685832520
-8divisor_de_frequencia_wave.vwf.vt
-Fdivisor_de_frequencia_wave.vwf.vt
-L0 29
-R3
+w1686366053
+8contador_assincrono_mod_100.vwf.vt
+Fcontador_assincrono_mod_100.vwf.vt
+Z12 L0 29
+R6
 r1
 !s85 0
 31
-R4
-!s107 divisor_de_frequencia_wave.vwf.vt|
-!s90 -work|work|divisor_de_frequencia_wave.vwf.vt|
+R7
+!s107 contador_assincrono_mod_100.vwf.vt|
+!s90 -work|work|contador_assincrono_mod_100.vwf.vt|
 !i113 1
+R10
+R11
+vdivisor_de_frequencia
+Z13 !s110 1686362572
+!i10b 1
+!s100 _=Q<L302F=CRL@5I?nJ6S1
+I?]QT==6Nf^bJI<zDg]Ej`2
+R2
+R0
+w1686362571
+R3
+R4
 R5
 R6
+r1
+!s85 0
+31
+Z14 !s108 1686362572.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdivisor_de_frequencia_vlg_vec_tst
+R13
+!i10b 1
+!s100 GdWk4W?U4N_Q9V7VY@9o>3
+IalW;h99ED<dJoUmi^=WmN0
+R2
+R0
+w1686362570
+Z15 8oscilador_customizado.vwf.vt
+Z16 Foscilador_customizado.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 oscilador_customizado.vwf.vt|
+Z17 !s90 -work|work|oscilador_customizado.vwf.vt|
+!i113 1
+R10
+R11
+voscilador_customizado
+Z18 !s110 1686533613
+!i10b 1
+!s100 R3bfm4Gi]4@Y790SKMl890
+I=U:iigzEnzkEPXI=W=K9@1
+R2
+R0
+w1686533612
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z19 !s108 1686533613.000000
+R8
+R9
+!i113 1
+R10
+R11
+voscilador_customizado_vlg_vec_tst
+R18
+!i10b 1
+!s100 SQ?Z]29Q@]j1Xlo?3TQb_2
+IO=dc1oO?:5PROXG6IeA9=0
+R2
+R0
+w1686533611
+R15
+R16
+R12
+R6
+r1
+!s85 0
+31
+R19
+!s107 oscilador_customizado.vwf.vt|
+R17
+!i113 1
+R10
+R11
